@@ -1,0 +1,78 @@
+/* Reset and universal setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    /* CSS Grid on the body element as requested in activity instructions */
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Main content takes remaining space, Aside takes fixed/proportional width */
+    grid-template-rows: auto auto 1fr auto;
+}
+
+/* 1. Header (Spans both columns) */
+header {
+    grid-column: 1 / -1;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.header-text {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 2. Navigation Menu (Flexbox inside Header) */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    padding: 1rem 0;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 3. Main Content Area */
+main {
+    grid-column: 1 / 2;
+    background-color: #cccccc;
+    color: #000000;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+}
+
+/* 4. Aside Area */
+aside {
+    grid-column: 2 / 3;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+}
+
+/* 5. Footer (Spans both columns) */
+footer {
+    grid-column: 1 / -1;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 1.25rem;
+}
