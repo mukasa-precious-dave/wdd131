@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #0b3c5d;
+    --secondary-color: #328cc1;
+    --accent-color: #d9b310;
+    --text-color: #1d2731;
+    --bg-color: #f4f6f8;
+    --card-bg: #ffffff;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header span#course-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 2.25rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.0rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.card-content, .sub-content {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.card-content img, .sub-content img {
+    width: 150px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.sub-section {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.sub-section h3 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.card ul {
+    list-style-type: disc;
+    padding: 1.5rem 2rem;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.card ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.card ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+    }
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+#lastModified {
+    color: var(--accent-color);
+}
