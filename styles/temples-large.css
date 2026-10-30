@@ -1,0 +1,30 @@
+@media (min-width: 640px) {
+  /* Hide the hamburger button on wide screens */
+  #menu {
+    display: none;
+  }
+
+  /* Reset header navigation horizontal flex layout */
+  header {
+    padding: 1rem 2rem;
+  }
+
+  nav.navigation {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+  }
+
+  nav.navigation a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  /* CSS Grid - 3 Column Desktop Layout */
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}

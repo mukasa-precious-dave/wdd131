@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album - WDD 131</title>
+  <meta name="description" content="A responsive picture album showcasing temples with mobile-first CSS grid and dynamic navigation.">
+  <meta name="author" content="Mukasa Precious">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets (Mobile-first order) -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  
+  <!-- Deferred JavaScript -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <span>Temple Album</span>
+    <button id="menu" aria-label="Toggle navigation menu"></button>
+    <nav class="navigation">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+    <div class="grid-container">
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" loading="lazy">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🌸 Mukasa Precious 🌸 Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
