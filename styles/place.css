@@ -1,0 +1,155 @@
+/* Global CSS Variables (Inspired by the Flag of Uganda: Yellow, Red, Black) */
+:root {
+    --primary-color: #000000;      /* Black */
+    --secondary-color: #fcdc04;    /* Yellow */
+    --accent-color: #d90000;       /* Red */
+    --background-color: #f7f7f7;   /* Light gray */
+    --card-bg: #ffffff;
+    --text-color: #222222;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset & Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* Layout / Grid Setup (Mobile First) */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+}
+
+.hero picture, .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards (Data & Weather) */
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 6px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.3rem;
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+}
+
+.card li span {
+    font-weight: bold;
+}
+
+/* Mobile Weather Icon */
+.weather-icon-mobile {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: auto;
+    border-top: 5px solid var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+#lastModified {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+/* ===================================================
+   Wider View Layout (Desktop / Tablet Media Query)
+   =================================================== */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .hero {
+        grid-column: 1 / -1;
+    }
+
+    .data-card {
+        grid-column: 1 / 2;
+    }
+
+    .weather-card {
+        grid-column: 2 / 3;
+    }
+
+    /* Hide Mobile SVG Icon in Wider View */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Requirement: Pseudo-element for Weather Emoji Icon in Wider View */
+    .weather-card h2::after {
+        content: " ⛅";
+        font-size: 1.4rem;
+        vertical-align: middle;
+    }
+}

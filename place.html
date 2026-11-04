@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uganda - The Pearl of Africa</title>
+    <meta name="description" content="WDD 131 Country Page assignment highlighting Uganda's geography, demographics, and local weather.">
+    <meta name="author" content="Mukasa Precious Serumaga">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/place.css">
+    
+    <!-- JavaScript File with Defer -->
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Uganda</h1>
+    </header>
+
+    <main>
+        <!-- Responsive Hero Section -->
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/victoria.jpg">
+                <img src="images/victoria.jpg" alt="Scenic view of Lake Victoria in Entebbe, Uganda" width="500" height="300">
+            </picture>
+        </section>
+
+        <!-- Data Section -->
+        <section class="card data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><span>Area:</span> 241,551 sq km</li>
+                <li><span>Population:</span> ~48 Million</li>
+                <li><span>Capital:</span> Kampala</li>
+                <li><span>Languages:</span> English, Swahili, Luganda</li>
+                <li><span>Currency:</span> Ugandan Shilling (UGX)</li>
+                <li><span>Time Zone:</span> EAT (UTC+3)</li>
+                <li><span>Calling Code:</span> +256</li>
+                <li><span>Internet TLD:</span> .ug</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="card weather-card">
+            <h2>Weather</h2>
+            <!-- Weather jpg Icon for Mobile View -->
+            <img src="images/weather.jpg" alt="Partly cloudy icon" class="weather-icon-mobile" width="48" height="48">
+            
+            <ul>
+                <li><span>Temperature:</span> <span id="temp">9</span>°C</li>
+                <li><span>Conditions:</span> Partly Cloudy</li>
+                <li><span>Wind:</span> <span id="wind">12</span> km/h</li>
+                <li><span>Wind Chill:</span> <span id="windchill">N/A</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Mukasa Precious Serumaga | Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
