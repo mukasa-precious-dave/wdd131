@@ -190,3 +190,11 @@ footer {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+/* Media Query for Responsiveness Audit */
+@media screen and (max-width: 768px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
