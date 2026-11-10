@@ -1,4 +1,4 @@
-// Expanded Temple Array (Original 7 + 3 Additional Temples)
+// Expanded Temple Array with fixed working image URLs
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -49,7 +49,6 @@ const temples = [
     area: 116642,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // Added 3 extra temples to meet requirements
   {
     templeName: "Salt Lake",
     location: "Salt Lake City, Utah, United States",
@@ -62,18 +61,18 @@ const temples = [
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 41010,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/Rome-Italy-Temple21.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior-3909-wallpaper.jpg"
   },
   {
     templeName: "Colonia Juárez Chihuahua Mexico",
     location: "Colonia Juárez, Chihuahua, Mexico",
     dedicated: "1999, March, 6",
     area: 6800,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/colonia-juarez-mexico/400x250/colonia-juarez-mexico-temple-ns-1036077-wallpaper.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/colonia-juarez-mexico/400x250/colonia-juarez-mexico-temple-1036077-wallpaper.jpg"
   }
 ];
 
-const cardsContainer = document.querySelector(".res-grid"); // Adjust selector to match your CSS grid container class/id
+const cardsContainer = document.querySelector(".res-grid");
 
 function createTempleCard(filteredTemples) {
   cardsContainer.innerHTML = "";
@@ -92,23 +91,20 @@ function createTempleCard(filteredTemples) {
     
     img.setAttribute("src", temple.imageUrl);
     img.setAttribute("alt", `${temple.templeName} Temple`);
-    // Native lazy loading requirement
     img.setAttribute("loading", "lazy");
 
     card.appendChild(name);
+    card.appendChild(img);
     card.appendChild(location);
     card.appendChild(dedication);
     card.appendChild(area);
-    card.appendChild(img);
 
     cardsContainer.appendChild(card);
   });
 }
 
-// Initial load: Display all temples
 createTempleCard(temples);
 
-// Filter Event Listeners
 document.getElementById("home").addEventListener("click", () => createTempleCard(temples));
 
 document.getElementById("old").addEventListener("click", () => {
@@ -137,6 +133,5 @@ document.getElementById("small").addEventListener("click", () => {
   createTempleCard(smallTemples);
 });
 
-// Footer Dynamic Dates
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
