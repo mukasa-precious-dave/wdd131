@@ -1,0 +1,115 @@
+/* styles/siteplan.css */
+
+:root {
+    --primary-color: #0b2545; /* Deep Navy Blue */
+    --secondary-color: #134074; /* Slate Blue */
+    --accent-color: #c59b27; /* Aviation Gold/Yellow */
+    --background-color: #eeeee4; /* Soft Light Gray */
+    --text-color: #1d2d44; /* Dark Charcoal Text */
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--white);
+}
+
+header p {
+    color: var(--accent-color);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--secondary-color);
+}
+
+.color-palette {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.color-box {
+    flex: 1;
+    min-width: 150px;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.box-primary { background-color: var(--primary-color); }
+.box-secondary { background-color: var(--secondary-color); }
+.box-accent { background-color: var(--accent-color); color: var(--text-color); }
+.box-bg { background-color: var(--background-color); color: var(--text-color); border: 1px solid #ccc; }
+
+.wireframe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .wireframe-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.wireframe-box {
+    border: 2px dashed var(--secondary-color);
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-top: 2rem;
+}
