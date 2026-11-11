@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit an admissions inquiry or course application to Candela Aviation Training Centre.">
+    <meta name="author" content="Mukasa Precious Serumaga">
+    <title>Candela Aviation Training Centre - Admissions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/catc-logo.webp" alt="Candela Aviation Training Centre Logo" class="site-logo" loading="lazy">
+                <span class="logo-text">Candela <span>Aviation</span></span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Programs</a></li>
+                    <li><a href="contact.html" class="active">Admissions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Admissions & Course Inquiry</h2>
+            <p>Ready to launch your aviation career? Complete the form below to submit your enrollment inquiry.</p>
+            
+            <form action="contact.html" method="get">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+256 ...">
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Preferred Program</label>
+                    <select id="program" name="program" required>
+                        <option value="" disabled selected>Select a program</option>
+                        <option value="foo">Flight Operations Officer (Dispatch)</option>
+                        <option value="navigation">General Navigation & Flight Planning</option>
+                        <option value="airlaw">Air Law & Operational Procedures</option>
+                        <option value="massbalance">Mass and Balance Masterclass</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Comments or Questions</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your background or inquiries..."></textarea>
+                </div>
+
+                <button type="submit">Submit Application Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year">2026</span> Candela Aviation Training Centre. All rights reserved.</p>
+        <p><a href="references.html">References & Citations</a></p>
+    </footer>
+</body>
+</html>

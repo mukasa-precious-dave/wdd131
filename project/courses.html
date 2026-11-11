@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore professional aviation certification courses offered at Candela Aviation Training Centre.">
+    <meta name="author" content="Mukasa Precious Serumaga">
+    <title>Candela Aviation Training Centre - Programs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/catc-logo.webp" alt="Candela Aviation Training Centre Logo" class="site-logo" loading="lazy">
+                <span class="logo-text">Candela <span>Aviation</span></span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Programs</a></li>
+                    <li><a href="contact.html">Admissions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Training Programs & Course Catalog</h2>
+            <p>Filter through our specialized ground school and flight operations modules below. Click any course to save your preference to your browser storage.</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="dispatch">Dispatch</button>
+                <button class="filter-btn" data-filter="ground">Ground School</button>
+            </div>
+
+            <!-- Dynamic content injected via JavaScript -->
+            <div id="course-container" class="grid-container">
+                <!-- Course cards populated dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year">2026</span> Candela Aviation Training Centre. All rights reserved.</p>
+        <p><a href="references.html">References & Citations</a></p>
+    </footer>
+</body>
+</html>
